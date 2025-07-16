@@ -1,13 +1,17 @@
 package cmd
 
-import("github.com/gin-gonic/gin")
+import(
+	"github.com/Elison12/gomail-webapplication/internal/config"
+	"github.com/Elison12/gomail-webapplication/internal/httpHandler"
+	"github.com/Elison12/gomail-webapplication/internal/mailer"
+	"github.com/gin-gonic/gin")
 
 func Execute() {
 	cfg := config.Load()
 
 	app := gin.Default()
 
-	h := handler.Handler{
+	h := httpHandler.Handler{
 		Mailer: mailer.New(cfg.MailGun),
 	}
 

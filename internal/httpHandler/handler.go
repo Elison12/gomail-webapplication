@@ -1,7 +1,9 @@
-package handler
+package httpHandler
 
 import (
 	"net/http"
+
+	"github.com/Elison12/gomail-webapplication/internal/mailer"
 	"github.com/gin-gonic/gin"
 )
 

@@ -1,6 +1,14 @@
 package config
 
-import ("log")
+import (
+	"log"
+	
+	"github.com/Elison12/gomail-webapplication/internal/mailer"
+	"github.com/knadh/koanf"
+	"github.com/knadh/koanf/parsers/yaml"
+	"github.com/knadh/koanf/providers/file"
+	"github.com/knadh/koanf/providers/structs"
+)
 
 type Config struct {
 	Server  string        `koanf:"server"`
